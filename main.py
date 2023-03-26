@@ -67,8 +67,8 @@ print("|========================================================================
 time.sleep(2)
 print("                                                                          ")
 try:
-    threads = input(Fore.BLUE +'[+] NHẬP SỐ ' + Fore.BLUE + 'LUỒNG' + Fore.GREEN + ' >>>')
-    site = input(Fore.BLUE + '[+] NHẬP ĐỊA CHỈ WEBSITE CẦN' + Fore.RED + ' DDoS ' + Fore.GREEN + '>>>')
+    threads = input(Fore.BLUE +'[+] NHẬP SỐ ' + Fore.BLUE + 'LUỒNG' + Fore.GREEN + ' >>> ')
+    site = input(Fore.BLUE + '[+] NHẬP ĐỊA CHỈ WEBSITE CẦN' + Fore.RED + ' DDoS ' + Fore.GREEN + ' >>> ')
     print("Đang DoS web {0} với {1} luồng".format(site, threads))
 
     print('[+] Đang thực hiện lệnh DoS')
@@ -80,8 +80,8 @@ try:
     print(Fore.GREEN)
 
 except:
-    print('[+] Execution Stopped with Error Code 0, Install GoLang or Your Internet is not working properly')
-    print('[+] Installing Dependancies')
-    os.system('python3 Install_Dependancies.py')
-    os.system('python Install_Dependancies.py')
-    os.system('py Install_Dependancies.py')
+    print('[+] Cài GoLang trước khi chạy mã này')
+    #print('[+] Installing Dependancies')
+    #os.system('python3 Install_Dependancies.py')
+    #os.system('python Install_Dependancies.py')
+    #os.system('py Install_Dependancies.py')
