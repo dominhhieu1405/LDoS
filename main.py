@@ -80,9 +80,3 @@ except:
     os.system('python3 Install_Dependancies.py')
     os.system('python Install_Dependancies.py')
     os.system('py Install_Dependancies.py')
-
-
-
-print(" ")
-print(" ")
-print(" "
