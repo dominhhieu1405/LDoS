@@ -23,6 +23,11 @@ import platform
 hostname = socket.gethostname()
 IPAddr = socket.gethostbyname(hostname)
 
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("8.8.8.8", 80))
+IPAddr = (s.getsockname()[0])
+s.close()
+
 def say_stuff(stuff_to_say):
     engine = pyttsx3.init()
     engine.say(str(stuff_to_say))
@@ -55,14 +60,14 @@ print("""
 
 """)
 
-print('Your OS:'+ Fore.RED + str(platform.system())+Fore.GREEN)
-print("Your IP:" + IPAddr)
+print('Your OS: '+ Fore.RED + str(platform.system())+Fore.GREEN)
+print("Your IP: " + IPAddr)
 print(Fore.BLACK + '[+] LDoS-Tool VERSION 1.0         ')
 print("|===========================================================================|")
 time.sleep(2)
 print("                                                                          ")
 try:
-    threads = input('[+] NHẬP SỐ ' + Fore.BLUE + 'LUỒNG' + Fore.GREEN + ' >>>')
+    threads = input(Fore.BLUE +'[+] NHẬP SỐ ' + Fore.BLUE + 'LUỒNG' + Fore.GREEN + ' >>>')
     site = input(Fore.BLUE + '[+] NHẬP ĐỊA CHỈ WEBSITE CẦN' + Fore.RED + ' DDoS ' + Fore.GREEN + '>>>')
     print("Đang DoS web {0} với {1} luồng".format(site, threads))
 
