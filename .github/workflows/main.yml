@@ -1,25 +1,22 @@
-name: Test BlogTruyen View
+name: PHP 8.1 Test
 
 on:
   push:
-    branches: [ main ]
-    
+    branches:
+      - main
+
 jobs:
-  build:
+  test:
     runs-on: ubuntu-20.04
-    env:
-      COMPOSER_NO_DEV: 1
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Setup PHP
-        uses: "shivammathur/setup-php@v2"
+      - name: Setup PHP 8.1
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.1
-          extensions: curl
+          php-version: '8.1'
 
-      - name: Exec script
-        with:
-          name: app
-          run: |
-            php text.php
+      - name: Run PHP 8.1 test
+        run: php test.php
